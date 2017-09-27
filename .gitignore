@@ -1,0 +1,9 @@
+.tmp
+.idea
+.DS_Store
+.sass-cache/
+.publish/
+build/
+dist/
+bower_components/
+node_modules/

@@ -1,0 +1,42 @@
+body {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  font-family: 'Work Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.425em;
+  font-size: 1.25rem;
+}
+
+p {
+  text-align: center;
+  max-width: 820px;
+  margin: 1rem auto;
+}
+
+p,
+li {
+  font-family: 'Work Sans', sans-serif;
+}
+
+form {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+footer p {
+  color: #777;
+  font-size: 12px;
+  margin: 0.5em auto;
+  max-width: 920px;
+}
