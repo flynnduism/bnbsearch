@@ -24,35 +24,50 @@
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <h1><a href="https://bnbsear.ch">bnbsearch</a></h1>
-  <p>Use keywords and advanced search criteria to find the perfect BNB - fast!</p>
+  <div class="grid-container">
 
-  <div class="row">
-    <div class="small-10 small-offset-1 small-centered large-8 columns">
+    <h1><a href="https://bnbsear.ch">bnbsearch</a></h1>
+    <p>Use keywords and advanced search criteria to find the perfect BNB - fast!</p>
 
-      <form action="http://www.google.com/search?hl=source=hp&q=" target="_blank">
-        <div class="row">
-          <input type="text" value="" name="q" id="s">
-        </div>
+    <div class="row">
+      <div class="small-10 small-offset-1 small-centered columns">
 
-        <input type="submit" value="Go">
-      </form>
+        <form id="search" action="http://www.google.com/search?hl=source=hp&q=" target="_blank">
+          <div class="row">
+            <div class="small-10 columns">
+              <input type="hidden" value="site:airbnb.com" name="q" id="s">
 
+              <label for="keywords">Keywords</label>
+              <input type="text" value="" name="Keywords" id="keywords">
+            </div>
+            <div class="small-2 columns">
+              <input type="submit" value="Go">
+            </div>
+          </div>
+        </form>
+
+      </div>
     </div>
+
+    <footer>
+      <p>Disclaimer: <a href="https://bnbsear.ch">Bnbsear.ch</a> is not affiliated with or supported by <a href="https://airbnb.com" target="_blank">Airbnb, Inc</a>, or any of its subsidiaries, in any manner or under any circumstances.</p>
+
+      <p>This tool is designed for BNB seekers, to create more specific web searches, and show how keywords can help you pin down what you're looking for.</p>
+    </footer>
   </div>
-
-  <footer>
-    <p>Disclaimer: <a href="https://bnbsear.ch">Bnbsear.ch</a> is not affiliated with or supported by <a href="https://airbnb.com" target="_blank">Airbnb, Inc</a>, or any of its subsidiaries, in any manner or under any circumstances.</p>
-
-    <p>This tool is designed for BNB seekers, to create more specific web searches, and show how keywords can help you pin down what you're looking for.</p>
-  </footer>
 
   <!-- <script src="assets/js/plugins.js"></script>
   <script src="assets/js/main.js"></script> -->
   <script type="text/javascript">
     window.onload = function() {
-      document.getElementById("s").focus();
+      document.getElementById("keywords").focus();
     };
+
+    $('#search').on('submit', function() {
+        var searchString = $('#s').val();
+        var formAction = $('#search').attr('action');
+        $('#search').attr('action', formAction + 'site:airbnb.com ' +searchString);
+    });
   </script>
 
   <script>
